@@ -1,0 +1,149 @@
+@import 'macro-css';
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+
+header {
+  .headerLeft {
+    // display: flex;
+    // align-items: center;
+    li {
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+  }
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.search-block {
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 0 15px;
+  position: relative;
+
+  .clear {
+    position: absolute;
+    right: 0;
+    top: 11;
+    width: 18px;
+    height: 18px;
+  }
+  input {
+    width: 200px;
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.drawer {
+  position: absolute;
+  width: 385px;
+  height: 100vh;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+.items {
+  flex: 1;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+
+  p {
+    font-size: 16px;
+  }
+  b {
+    font-size: 14px;
+  }
+  .removeBtn {
+    margin-left: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.cartTotalBlock {
+  li {
+    align-items: flex-end;
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #e4e4e4;
+      position: relative;
+      margin: 0 7px 5px 7px;
+    }
+  }
+}
+.greenBtn {
+  background: #9dd458;
+  width: 325px;
+  height: 35px;
+  border: 1px solid #9dd458;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  position: center;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten(#9dd458, 5%);
+  }
+  &:active {
+    background: darken(#9dd458, 5%);
+  }
+}
+.emptyBox {
+  flex-direction: column;
+  flex: 1;
+  margin-top: 100px;
+}
